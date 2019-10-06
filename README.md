@@ -1,1 +1,1 @@
-# ksmall 작업
+# ksmall admin 작업

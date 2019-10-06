@@ -2137,61 +2137,24 @@ button {
 	top: 160px;
 	left: 0;
 	right: 0;
-	bottom: 370px;
+	bottom: 76px;
 	overflow: auto;
 	overflow-x: hidden;
 }
 .side .menu_list > li > a {
 	position: relative;
 	display: block;
-	padding-left: 63px;
+	padding-left: 45px;
 }
 .side .menu_list > li .icon {
 	position: absolute;
 	top: 50%;
-	left: 21px;
-}
-.side .menu_list .menu1 .icon {
-	width: 25px;
-	height: 24px;
-	margin-top: -12px;
-	background-position: -10px -100px;
-}
-.side .menu_list .menu2 .icon {
+	left: 10px;
 	width: 25px;
 	height: 25px;
 	margin-top: -12.5px;
-	background-position: -57px -99px;
-}
-.side .menu_list .menu3 .icon {
-	width: 25px;
-	height: 25px;
-	margin-top: -12.5px;
-	background-position: -104px -99px;
-}
-.side .menu_list .menu4 .icon {
-	width: 25px;
-	height: 25px;
-	margin-top: -12.5px;
-	background-position: -145px -99px;
-}
-.side .menu_list .menu5 .icon {
-	width: 20px;
-	height: 20px;
-	margin: -10px 0 0 2px;
-	background-position: -306px -275px;
-}
-.side .menu_list .menu6 .icon {
-	width: 31px;
-	height: 25px;
-	margin-top: -12.5px;
-	background-position: -186px -99px;
-}
-.side .menu_list .menu7 .icon {
-	width: 25px;
-	height: 24px;
-	margin-top: -12px;
-	background-position: -233px -99px;
+	border: 2px solid #bababa;
+	background: none;
 }
 .side .menu_list > li .txt {
 	display: block;
@@ -2249,7 +2212,7 @@ button {
 .side .menu_list li li > a {
 	position: relative;
 	display: block;
-	padding-left: 63px;
+	padding-left: 45px;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 14px;
 	color: #5c5a5b;
@@ -2260,6 +2223,9 @@ button {
 	height: 12px;
 	margin-top: -6px;
 	background-position: -290px -81px;
+}
+.side .menu_list li li li a {
+	padding-left: 60px;
 }
 
 /* 사이드 메뉴 접을 때 */

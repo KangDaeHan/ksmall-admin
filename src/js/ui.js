@@ -21,8 +21,9 @@ function sideMenu(){
 	var sideSubDep = side.find('ul ul');
 	var current = $('.menu_title').text().trim();
 
-	side.find('> li > a').each(function(){
+	side.find(' li a').each(function(){
 		(!$(this).next().is('ul')) ? $(this).addClass('depth1') : null;
+		(!side.find('li li li a').next().is('ul')) ? side.find('li li li a').removeClass('depth1').addClass('depth3') : null;
 	});
 
 	sideLink.each(function() {
@@ -107,32 +108,6 @@ function plus(el) {
 		expense.val(expenseVal);
 	}
 };
-
-// today view 스크롤
-function rightScroller(el) {
-	st = $(this).scrollTop();
-	quick = $("#" + el);
-	off = quick.offset();
-	th = quick.outerHeight();
-	cp = $(".container").offset();
-
-	if( $("body").height() - st - $(".footer").outerHeight() > th ) {
-		if( cp.top + 68 < st + 20 - 20 ) quick.css("top", st + 20 - cp.top - 20);
-		if( st + 20 < cp.top + 68 ) quick.css("top", 68);
-	}
-}
-
-// today view 리스트 펼치기
-function todayList(id) {
-	var list_box = $("." + id);
-	if ( list_box.is(":visible") ) {
-		list_box.slideUp();
-		list_box.prev().children('.title').removeClass('on');
-	} else {
-		list_box.slideDown();
-		list_box.prev().children('.title').addClass('on');
-	}
-}
 
 // 스크롤 메뉴 이동
 function scrollMove(seq){
@@ -460,29 +435,11 @@ $(document).ready(function() {
 		$('.monthpicker').monthpicker('show');
 	});
 
-	
 	//이미지 미리로드
 	$("img.preload").preload();
 
 	//사이드 메뉴 실행
 	sideMenu();
-
-	// today view 스크롤
-	$(window).scroll(function() {
-		rightScroller('today_view');
-	});
-
-	//today slide
-	$('.today_slide').slick({
-		vertical: true,
-		verticalSwiping: false,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		infinite: false,
-		centerMode: false,
-		focusOnSelect: true
-	});
 
 	// 확대 팝업 클릭시
 	lightbox.option({
