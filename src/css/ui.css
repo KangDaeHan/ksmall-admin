@@ -110,6 +110,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+textarea {
+	resize: none;
+}
 
 * {
 	color: #959595;
@@ -353,6 +356,14 @@ table .link , table .txt {
 	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
 	color: #808080;
 }
+table textarea {
+	width: 100%;
+	height: 130px;
+	border: 1px solid #bfbfbf;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+	color: #808080;
+}
 .tbl_area {
 	position: relative;
 	margin-bottom: 30px;
@@ -509,7 +520,6 @@ table .link , table .txt {
 	clip:rect(0,0,0,0);
 	border: 0;
 }
-
 .filebox label {
 	position: absolute;
 	top: 0;
@@ -532,6 +542,17 @@ table .link , table .txt {
 .filebox label.disabled {
 	background: #BEBEBE;
 	cursor: default;
+}
+.filebox.single {
+	width: auto;
+	padding: 0;
+}
+.filebox.single label{
+	position: static;
+	display: inline-block;
+	width: auto;
+	margin: 0 auto;
+	vertical-align: middle;
 }
 
 /* named upload */
@@ -917,29 +938,52 @@ button {
 .lightbox {
 	position: fixed !important;
 	top: 50% !important;
+	left: 50% !important;
+	width: 620px;
 	height: 660px;
-	margin-top: -330px;
+	margin: -330px 0 0 -310px;
+	background: #fff;
+	overflow: hidden;
 }
  .lightbox .lb-outerContainer {
-	 width: 620px;
+	 width: 620px !important;
 	 height: 660px !important;
+	 margin: 0;
+	 background: transparent;
 	 border-radius: 0;
 	 overflow: hidden;
 }
+.lb-loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 620px;
+	height: 100%;
+	margin: 0 0 0 -310px;
+}
 .lightbox .lb-outerContainer .lb-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
 	padding: 51px 10px 10px;
+	overflow: hidden;
 }
 .lightbox .lb-image {
+	max-width: 100%;
+	max-height: 100%;
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
 	border: 0;
 	border-radius: 0;
 }
 .lb-dataContainer {
     position: absolute;
-    top: 50%;
-    left: 50%;
-	width: 100%;
+    top: 0;
+    left: 0;
+	width: 620px !important;
 	height: 41px;
-	margin: -330px 0 0 -310px;
+	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #383c38;
 	zoom: 1;
@@ -1020,7 +1064,7 @@ button {
 }
 .align_abreast .inpt {
 	display: inline-block;
-	width: 144px !important;
+	width: 139px !important;
 }
 .align_abreast .one.inpt {
 	width: 274px !important;
@@ -1043,10 +1087,14 @@ button {
 	color: #808080;
 	font-weight: 600;
 }
-
+.rdio_area {
+	margin-left: 25px;
+}
 
 #tooltip {
 	position: absolute;
+	left: 0 !important;
+	margin-left: 0 !important;
 	background: #fff;
 	border: 1px solid #bbb;
 	padding: 7px 15px;
@@ -1061,7 +1109,7 @@ button {
 }
 #tooltip:after, #tooltip:before {
 	top: 100%;
-	left: 50%;
+	left: 30px;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -1383,6 +1431,16 @@ button {
 	font-weight: 600;
 	color: #ffae00;
 }
+.header .inner .home {
+	position: absolute;
+	top: 43px;
+	right: 77px;
+}
+.header .inner .home a {
+	font-size: 12px;
+	color: #fff;
+}
+
 .sub_comm_top {
 	position: relative;
 	height: 76px;
@@ -2301,6 +2359,9 @@ button {
 	left: 63px;
 	width: 150px;
 	z-index: 20;
+}
+.expansion .side .menu_list li ul ul {
+	left: 150px;
 }
 .expansion .side .menu_list li ul li {
 	background: #f2f2f2;
@@ -4191,7 +4252,7 @@ button {
 }
 
 /* 주문배송조회 */
-.tbl_top_util .download {
+.tbl_top_util .download , .tbl_top_util .print {
 	position: relative;
 	min-width: 147px;
 	padding-right: 46px;
@@ -4202,7 +4263,10 @@ button {
 	color: #fff;
 	text-align: right;
 }
-.tbl_top_util .download:after {
+.tbl_top_util .print {
+	padding-right: 55px;
+}
+.tbl_top_util .download:after , .tbl_top_util .print:after {
 	position: absolute;
 	top: 50%;
 	right: 15px;
@@ -4210,6 +4274,9 @@ button {
 	height: 16px;
 	margin-top: -8px;
 	background-position: -215px -240px;
+}
+.tbl_top_util .print:after {
+	background-position: -174px -327px;
 }
 .pop_sch_wrap {
 	width: 600px;
@@ -4445,8 +4512,7 @@ table .total_price .box .price {
 
 /* 고객상담 문의 */
 .customer_menu {
-	padding: 8px 0 28px 18px;
-	border-bottom: 2px solid #fab000;
+	padding: 8px 0 0 18px;
 	overflow: hidden;
 }
 .customer_menu li {
@@ -4476,11 +4542,16 @@ table .total_price .box .price {
 	margin-top: 58px;
 	border-top: 2px solid #054fff;
 }
+#agency_inquiry {
+	margin-top: 20px;
+	border-top: 2px solid #fab000;
+}
 .customer_inquiry.bor_no {
 	margin: 0;
 	border-top: 0;
 }
 .customer_inquiry.bor_gray {
+	margin-top: 30px;
 	border-color: #b5b5b5;
 }
 .customer_inquiry .tit {
@@ -4731,7 +4802,7 @@ table .total_price .box .price {
 
 /* 회원가입 */
 .upload_info {
-	margin-top: 10px;
+	margin-bottom: 15px;
 }
 .upload_info li {
 	margin-top: 5px;
@@ -4893,6 +4964,38 @@ table .total_price .box .price {
 }
 .pop_rd_box {
 	margin: 0 0 15px 0;
+}
+
+/* 파일업로드 추가 */
+.upload_area {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.upload_area .list {
+	flex: 1;
+	padding: 0 10px 0 0;
+}
+.upload_area .list .txt {
+	width: 80px;
+	margin: 0 0 5px;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+}
+.upload_area .list .point {
+	color: #ff0000;
+}
+.upload_area .upload_display {
+	width: 100%;
+	height: 145px;
+}
+.upload_area .upload_display img {
+	max-height: 100%;
+	padding: 5px;
+}
+.check_use {
+	margin-bottom: 10px;
 }
 
 
