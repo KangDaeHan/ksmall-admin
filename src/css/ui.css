@@ -2066,7 +2066,7 @@ button {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 202px;
+	width: 258px;
 	padding: 120px 0 76px;
 	z-index: 20;
 }
@@ -2203,6 +2203,7 @@ button {
 	position: relative;
 	display: block;
 	padding-left: 45px;
+	overflow: hidden;
 }
 .side .menu_list > li .icon {
 	position: absolute;
@@ -2216,12 +2217,33 @@ button {
 }
 .side .menu_list > li .txt {
 	display: block;
-	padding: 10px 20px 10px 0;
+	padding: 9px 20px 10px 0;
 	font-family: "Noto Sans Korean" , sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	color: #000;
 	letter-spacing: -1px;
+}
+.side .menu_list li li > a {
+	position: relative;
+	display: block;
+	padding-left: 45px;
+	background: #fff;
+	border-top: 1px solid transparent;
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 16px;
+	color: #000;
+	line-height: 34px;
+}
+.side .menu_list li li > a.depth1 {
+	background: #fff;
+	border-color: transparent;
+}
+.side .menu_list li li li a.depth3 {
+	padding-left: 60px;
+	background: #fff;
+	border-color: transparent;
+	color: #585858;
 }
 .side .menu_list li a:after {
 	display: none;
@@ -2236,14 +2258,7 @@ button {
 	background-repeat: no-repeat;
 	background-position: -317px -60px;
 }
-.side .menu_list > li > a.active:after , .side .menu_list li li > a.active:after {
-	display: block;
-	width: 13px;
-	height: 7px;
-	margin-top: -3.5px;
-	background-position: -204px -37px;
-}
-.side .menu_list li a.active.depth1:after {
+.side .menu_list li li > a:after {
 	display: block;
 	right: 11px;
 	width: 7px;
@@ -2251,40 +2266,58 @@ button {
 	margin-top: -6.5px;
 	background-position: -229px -33px;
 }
-.side .menu_list > li > a.active {
-	background-color: #e0e0e0;
+.side .menu_list > li > a.active:after , .side .menu_list li li > a.active:after {
+	display: block;
+	width: 13px;
+	height: 7px;
+	margin-top: -3.5px;
+	background-position: -204px -37px;
 }
-/* .side .menu_list > li > a.active.on {
-	background-position: ;
-} */
+.side .menu_list li li > a.active.depth1 {
+	background: #e0e0e0;
+}
+.side .menu_list li a.active.depth1:after {
+	right: 11px;
+    width: 7px;
+    height: 13px;
+    margin-top: -6.5px;
+    background-position: -229px -33px;
+}
+.side .menu_list > li > a.active {
+	background-color: #1853bb;
+}
+.side .menu_list > li > a.active .txt {
+	color: #fff;
+}
 .side .menu_list li li > a.active {
+	background: #e0e0e0;
 	color: #000;
 }
 .side .menu_list li li > a.active:after {
+	right: 9px;
+	width: 13px;
+	height: 7px;
+	margin-top: -3.5px;
+	background-position: -204px -37px;
+}
+.side .menu_list li li:first-child > a {
+	border-color: transparent;
+}
+.side .menu_list li li li a.active.depth3 {
+	color: #000;
+}
+.side .menu_list li li li a.depth3:after {
+	display: none;
+}
+.side .menu_list li li li a.active.depth3:after {
+	display: block;
 	right: 11px;
 	width: 7px;
 	height: 13px;
 	margin-top: -6.5px;
-	background-position: -248px -33px;
+	background-position: -334px -33px;
 }
-.side .menu_list li li > a {
-	position: relative;
-	display: block;
-	padding-left: 45px;
-	font-family: "Noto Sans Korean" , sans-serif;
-	font-size: 14px;
-	color: #5c5a5b;
-	line-height: 34px;
-}
-.side .menu_list li li > a:after {
-	width: 10px;
-	height: 12px;
-	margin-top: -6px;
-	background-position: -290px -81px;
-}
-.side .menu_list li li li a {
-	padding-left: 60px;
-}
+
 
 /* 사이드 메뉴 접을 때 */
 .expansion .side .menu_list {
@@ -2326,29 +2359,6 @@ button {
 	left: 50%;
 	margin-left: -12.5px;
 }
-.expansion .side .menu_list > li.menu1 .icon {
-	background-position: -8px -274px;
-}
-.expansion .side .menu_list > li.menu2 .icon {
-	background-position: -55px -273px;
-}
-.expansion .side .menu_list > li.menu3 .icon {
-	background-position: -102px -273px;
-}
-.expansion .side .menu_list > li.menu4 .icon {
-	background-position: -143px -273px; 
-}
-.expansion .side .menu_list > li.menu5 .icon {
-	margin: -10px 0 0 -10px;
-	background-position: -271px -275px;
-}
-.expansion .side .menu_list > li.menu6 .icon {
-	margin-left: -13.5px;
-	background-position: -184px -273px;
-}
-.expansion .side .menu_list > li.menu7 .icon {
-	background-position: -231px -273px;
-}
 .expansion .side .menu_list li {
 	position: relative;
 	background-color: #0c306e;
@@ -2357,18 +2367,22 @@ button {
 	position: absolute;
 	top: 0;
 	left: 63px;
-	width: 150px;
+	width: 170px;
 	z-index: 20;
 }
 .expansion .side .menu_list li ul ul {
-	left: 150px;
+	left: 170px;
 }
 .expansion .side .menu_list li ul li {
 	background: #f2f2f2;
 }
 .expansion .side .menu_list li li > a {
-	padding: 0 10px;
+	padding: 0 10px !important;
+	background: transparent;
 	color: #878787;
+}
+.expansion .side .menu_list li li li > a {
+	background: transparent;
 }
 .expansion .side .menu_list li li > a.active {
 	background: #e6e6e6;

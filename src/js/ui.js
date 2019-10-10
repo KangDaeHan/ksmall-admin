@@ -461,7 +461,7 @@ $(document).ready(function() {
 		} else {
 			$('.wrap , .sub_wrap').removeClass('expansion');
 			$(".side").stop().animate({
-				width : "202px"
+				width : "258px"
 			},200);
 		}
 		return false;
