@@ -2358,6 +2358,7 @@ button {
 .expansion .side .menu_list > li .icon {
 	left: 50%;
 	margin-left: -12.5px;
+	border-color: #fff;
 }
 .expansion .side .menu_list li {
 	position: relative;
