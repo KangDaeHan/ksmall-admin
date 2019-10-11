@@ -63,19 +63,19 @@
 					<li><a href="#">ERP대여주문관리</a></li>
 					<li><a href="#">전표주문관리</a>
 						<ul>
-							<li><a href="#">주문조회</a></li>
-							<li><a href="#">주문확인조회</a></li>
-							<li><a href="#">일일발주등록</a></li>
-							<li><a href="#">전표코드관리</a></li>
-							<li><a href="#">OLAP코드관리</a></li>
+							<li><a href="#">· 주문조회</a></li>
+							<li><a href="#">· 주문확인조회</a></li>
+							<li><a href="#">· 일일발주등록</a></li>
+							<li><a href="#">· 전표코드관리</a></li>
+							<li><a href="#">· OLAP코드관리</a></li>
 						</ul>
 					</li>
 					<li><a href="#">신전표주문관리</a>
 						<ul>
-							<li><a href="#">전표주문내역조회</a></li>
-							<li><a href="#">전표주문내역확인</a></li>
-							<li><a href="#">전표코드조회</a></li>
-							<li><a href="#">OLAP코드관리</a></li>
+							<li><a href="#">· 전표주문내역조회</a></li>
+							<li><a href="#">· 전표주문내역확인</a></li>
+							<li><a href="#">· 전표코드조회</a></li>
+							<li><a href="#">· OLAP코드관리</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -148,10 +148,11 @@
 									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
-							<th style="width: 140px;">연락처</th>
-							<td style="width: 35%">
+							<th style="width: 140px;">제품판매단가 <span class="point">*</span></th>
+							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="txt">원</span>
 								</div>
 							</td>
 						</tr>
@@ -181,14 +182,14 @@
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">예) 3대 입력 (3대미만 = 2대이하)</span>
+									<span class="txt">XX대 이하</span>
 								</div>
 							</td>
 							<th>단말기비율</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">예) 1, 1.25</span>
+									<span class="txt">(%)</span>
 								</div>
 							</td>
 						</tr>
@@ -197,7 +198,7 @@
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">예) 1, 1.25</span>
+									<span class="txt">XX대 이상</span>
 								</div>
 							</td>
 							<th>POS주문사용여부</th>
@@ -213,26 +214,29 @@
 							</td>
 						</tr>
 						<tr>
-							<th>재고상태</th>
+							<th>제고상태</th>
 							<td>
 								<div class="">
 									<input type="checkbox" name="state" id="all_okay" checked>
 									<label for="all_okay">정상</label>
-									<input type="checkbox" name="state" id="no">
-									<label for="no">단종</label>
-									<input type="checkbox" name="state" id="no">
-									<label for="no">품절</label>
+									<input type="checkbox" name="state" id="extinction">
+									<label for="extinction">단종</label>
+									<input type="checkbox" name="state" id="sold_out">
+									<label for="sold_out">품절</label>
 								</div>
 							</td>
 							<th>세트상품구성</th>
 							<td>
-								<div>
-									<input type="checkbox" name="" id="">
+								<div class="">
+									<input type="checkbox" name="" id="set">
+									<label for="set">세트 구성</label>
+									<input type="checkbox" name="" id="single_set">
+									<label for="single_set">단품 구성</label>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>1 재품제조사</th>
+							<th>제품제조사</th>
 							<td>
 								<div class="align_abreast">
 									<div class="sel_area">
@@ -244,34 +248,171 @@
 									</div>
 								</div>
 							</td>
-							<th>2 제품판매단가 <span class="point">*</span></th>
-							<td>
+							<th style="width: 140px;">제조사 연락처 <span class="point">*</span></th>
+							<td style="width: 35%">
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">원</span>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>3 제품스텍 <span class="point">*</span></th>
+							<th>제품특징 <span class="point">*</span></th>
+							<td colspan="3">
+								<ul class="upload_info">
+									<li><span class="point">*</span> 가로글자 최대 33자 (띄어쓰기 포함)</li>
+									<li><span class="point">*</span> 세로 글자 행 8줄 미만</li>
+								</ul>
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>제품스펙 <span class="point">*</span></th>
+							<td colspan="3">
+								<ul class="upload_info">
+									<li><span class="point">*</span> 해당항목에 내용을 기입해 주세요.</li>
+									<li><span class="point">*</span> 해당항목에 내용이 없을 시 비워두세요.</li>
+								</ul>
+								
+								<div class="product_spec_box">
+									<div class="tbl_area">
+										<table class="tbl_col">
+											<thead>
+												<tr>
+													<th style="width: 245px;" colspan="2">항목</th>
+													<th style="width: auto;">제품 사양 / SPECIFICATIONS</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="bg" colspan="2">CPU</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">Memory</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">LCD</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">Printer</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg bor_gray" rowspan="2">Reader</td>
+													<td class="bg">I / C</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg">M / S</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg bor_gray" rowspan="2">Communication</td>
+													<td class="bg">LAN</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg">Modem</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg bor_gray" rowspan="2">Port</td>
+													<td class="bg">USB</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg">Serial</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">Key</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">Power</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">Product Code</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="bg" colspan="2">ETC</td>
+													<td class="t_left">
+														<div class="">
+														<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+															</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</td>
+						</tr>
+						<tr>
+							<th>주의사항</th>
 							<td colspan="3">
 								<textarea name="" id="" cols="30" rows="10"></textarea>
 							</td>
 						</tr>
 						<tr>
-							<th>4 주요기능 <span class="point">*</span></th>
-							<td colspan="3">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</td>
-						</tr>
-						<tr>
-							<th>5 주의사항 <span class="point">*</span></th>
-							<td colspan="3">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</td>
-						</tr>
-						<tr>
-							<th>6 제품이미지 <span class="point">*</span></th>
+							<th>제품이미지 <span class="point">*</span></th>
 							<td colspan="3">
 								<ul class="upload_info">
 									<li><span class="point">*</span> 가로와 세로 600px 최적화</li>
@@ -325,7 +466,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th>7 제품상세이미지 <span class="point">*</span></th>
+							<th>제품상세이미지 <span class="point">*</span></th>
 							<td colspan="3">
 								<ul class="upload_info">
 									<li><span class="point">*</span> 가로 1000px 최적화</li>
@@ -372,10 +513,10 @@
 							</td>
 						</tr>
 						<tr>
-							<th>8 인트로이미지 <span class="point">*</span></th>
+							<th>인트로이미지</th>
 							<td colspan="3">
 								<ul class="upload_info">
-									<li><span class="point">*</span> 가로와 세로 1920px X 980px (반드시 최적화)</li>
+									<li><span class="point">*</span> 가로와 세로 1920px X 1080px (반드시 최적화)</li>
 									<li><span class="point">*</span> 모바일용 별도</li>
 								</ul>
 								<div class="check_use">
@@ -387,6 +528,113 @@
 										<label for="intro_img_upload" onclick="fileUpLoad('intro_img_upload','intro_img');">파일선택</label>
 										<input type="file" id="intro_img_upload" class="upload-hidden" />
 									</div>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<th>연관상품</th>
+							<td colspan="3">
+								<ul class="upload_info">
+									<li><span class="point">*</span> 본 제품과 연관되어 있는 상품을 확인 후 선택해 주세요!</li>
+								</ul>
+
+								<div class="upload_area">
+									<div class="list"> 
+										<p class="txt">연관상품1</p>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">유선단말기</option>
+												<option value="">무선단말기</option>
+												<option value="">POS</option>
+											</select>
+										</div>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">제품0</option>
+												<option value="">제품1</option>
+												<option value="">제품2</option>
+												<option value="">제품3</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="list">
+										<p class="txt">연관상품2</p>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">유선단말기</option>
+												<option value="">무선단말기</option>
+												<option value="">POS</option>
+											</select>
+										</div>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">제품0</option>
+												<option value="">제품1</option>
+												<option value="">제품2</option>
+												<option value="">제품3</option>
+											</select>
+										</div>
+									</div> 
+
+									<div class="list">
+										<p class="txt">연관상품3</p>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">유선단말기</option>
+												<option value="">무선단말기</option>
+												<option value="">POS</option>
+											</select>
+										</div>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">제품0</option>
+												<option value="">제품1</option>
+												<option value="">제품2</option>
+												<option value="">제품3</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="list">
+										<p class="txt">연관상품4</p>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">유선단말기</option>
+												<option value="">무선단말기</option>
+												<option value="">POS</option>
+											</select>
+										</div>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">제품0</option>
+												<option value="">제품1</option>
+												<option value="">제품2</option>
+												<option value="">제품3</option>
+											</select>
+										</div>
+									</div> 
+
+									<div class="list">
+										<p class="txt">연관상품5</p>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">유선단말기</option>
+												<option value="">무선단말기</option>
+												<option value="">POS</option>
+											</select>
+										</div>
+										<div class="sel_area">
+											<select name="" id="" class="sel_box" style="min-width: 140px;">
+												<option value="">제품0</option>
+												<option value="">제품1</option>
+												<option value="">제품2</option>
+												<option value="">제품3</option>
+											</select>
+										</div>
+									</div>
+
 								</div>
 							</td>
 						</tr>
@@ -588,7 +836,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	// tab('.terms_tab', 'null'); //현재 활성화 시킬 탭메뉴
+
 });
 </script>
 </body>

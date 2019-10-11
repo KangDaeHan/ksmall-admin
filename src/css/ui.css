@@ -375,9 +375,6 @@ table textarea {
 	border-color: #3c3d3e;
 	font-family: "Noto Sans Korean" , sans-serif;
 }
-.tbl_row {
-	table-layout: auto;
-}
 .tbl_row th {
 	background: #ededed;
 	border-top: 1px solid #cfcfcf;
@@ -416,7 +413,7 @@ table textarea {
 	color: #bbb;
 	vertical-align: middle;
 }
-.tbl_row td .inpt {
+table td .inpt {
 	width: 100%;
 	height: 23px;
 	border-color: #bfbfbf;
@@ -2240,7 +2237,7 @@ button {
 	border-color: transparent;
 }
 .side .menu_list li li li a.depth3 {
-	padding-left: 60px;
+	padding-left: 45px;
 	background: #fff;
 	border-color: transparent;
 	color: #585858;
@@ -5011,6 +5008,15 @@ table .total_price .box .price {
 }
 .check_use {
 	margin-bottom: 10px;
+}
+.tbl_row .product_spec_box .tbl_area {
+	margin: 0;
+}
+.upload_area .list .sel_area {
+	margin-top: 5px;
+}
+.upload_area .list .txt + .sel_area {
+	margin: 0;
 }
 
 
