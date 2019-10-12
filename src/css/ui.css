@@ -706,6 +706,7 @@ button {
 }
 .btn.gray {
 	background: #3c3d3e;
+	border-color: #3c3d3e;
 	color: #fff;
 }
 .btn.blue {
@@ -1069,6 +1070,9 @@ button {
 .f_red {
 	color: #ff1234 !important;
 }
+.f_blue {
+	color: #1453be !important;
+}
 .bor_black {
 	border-color: #000 !important;
 }
@@ -1086,6 +1090,20 @@ button {
 }
 .rdio_area {
 	margin-left: 25px;
+}
+.tbl_info_txt {
+	margin-top: 5px;
+	font-family: "맑은고딕" , "MalgunGothic" , sans-serif;
+	font-size: 12px;
+}
+.pos_align {
+	position: relative;
+	margin-top: 10px;
+}
+.pos_align .tbl_info_txt {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
 }
 
 #tooltip {

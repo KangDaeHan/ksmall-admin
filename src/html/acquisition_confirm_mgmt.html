@@ -127,11 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">주문취소</h2>
+				<h2 class="sprite_before tit">인수확인관리</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
 					<li><a href="#">대리점주문현황관리 &nbsp;&gt;</a></li>
-					<li><a href="#">주문취소</a></li>
+					<li><a href="#">인수확인관리</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -141,15 +141,17 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 110px;">주문일자</th>
+							<th style="width: 110px;">인수확인년월</th>
 							<td>
 								<div class="datepicker">
-									<input type="text" class="date_from" id="from" name="from">
+									<input type="text" class="monthpicker" name="month_from" id="month_from"/>
+									<label for="month_from" class="btn_monthpicker">선택</label>
 									<span>~</span>
-									<input type="text" class="date_to" id="to" name="to">
+									<input type="text" class="monthpicker" name="month_to" id="month_to"/>
+									<label for="month_to" class="btn_monthpicker">선택</label>
 								</div>
 							</td>
-							<th style="width: 110px;">프로젝트코드</th>
+							<th style="width: 110px;">주문처코드</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
@@ -159,37 +161,20 @@
 							</td>
 						</tr>
 						<tr>
-							<th>주문처코드</th>
+							<th>접수일자</th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-								
-							</td>
-							<th>주문번호</th>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>인수처코드</th>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
-							<th>상태</th>
+							<th>접수구분</th>
 							<td>
 								<div class="align_abreast">
 									<div class="sel_area">
 										<select name="" id="" class="sel_box" style="min-width: 140px;">
 											<option value="">전채</option>
-											<option value="">승인</option>
-											<option value="">취소</option>
+											<option value="">접수</option>
+											<option value="">미접수</option>
 										</select>
 									</div>
 								</div>
@@ -197,6 +182,10 @@
 						</tr>
 					</tbody>
 				</table>
+				<div class="pos_align">
+					<p class="tbl_info_txt f_red">※ 2009년 1월 이후의 Data만 조회가능 합니다.</p>
+					<button type="type" class="btn xs gray">09월 data 생성하기</button>
+				</div>
 			</div>
 
 			<div class="btn_area">
@@ -219,329 +208,92 @@
 				</div>
 			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll">
+			<div class="tbl_area">
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">주문번호</th>
-							<th style="width: 80px;">일련번호</th>
-							<th style="width: 150px;">주문일시</th>
-							<th style="width: 200px;">주문처코드</th>
-							<th style="width: 200px;">주문처명</th>
-							<th style="width: 100px;">인수처코드</th>
-							<th style="width: 150px;">인수처명</th>
-							<th style="width: 200px;">모델명</th>
-							<th style="width: 100px">주문수량</th>
-							<th style="width: 150px;">주문금액</th>
-							<th style="width: 150px;">주문총금액</th>
-							<th style="width: 100px;">프로젝트코드</th>
-							<th style="width: 120px;">프로젝트명</th>
-							<th style="width: 150px;">승인일자</th>
-							<th style="width: 100px;">취소일자</th>
-							<th style="width: 285px;">취소사유</th>
-							<th style="width: 180px;">결제정보</th>
-							<th style="width: 150px;">카드사(은행)</th>
-							<th style="width: 100px;">관리자확인</th>
-							<th style="width: 100px;">출고유형</th>
-							<th style="width: 100px;">결제방법</th>
-							<th style="width: 120px;">승인(계좌)번호</th>
+							<th style="width: 100px;">인수년월</th>
+							<th style="width: 120px;">대리점코드</th>
+							<th style="width: 200px;">대리점명</th>
+							<th style="width: 120px;">접수일자</th>
+							<th style="width: 100px;">접수여부</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="22" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="5" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_red">구매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
-							<td>일련번호</td>
-							<td>주문일시</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>모델명</td>
-							<td>주문수량</td>
-							<td>주문금액</td>
-							<td>주문총금액</td>
-							<td>프로젝트코드</td>
-							<td>프로젝트명</td>
-							<td>승인일자</td>
-							<td>취소일자</td>
-							<td>
-								<div class="align_abreast">
-									<input type="text" class="inpt wid177" name="" id="" />
-									<button type="" class="btn xs gray">등록</button>
-								</div>
-							</td>
-							<td>결제정보</td>
-							<td>카드사(은행)</td>
-							<td>관리자확인</td>
-							<td><span class="f_blue">외상판매</span></td>
-							<td>결제방법</td>
-							<td>승인(계좌)번호</td>
+							<td><a href="#" class="bold">2019-09</a></td>
+							<td>D500000</td>
+							<td>케이에스넷</td>
+							<td>2019-09</td>
+							<td>미접수</td>
 						</tr>
 					</tbody>
 				</table>
