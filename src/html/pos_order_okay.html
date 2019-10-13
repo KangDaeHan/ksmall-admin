@@ -127,11 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">반품정보조회</h2>
+				<h2 class="sprite_before tit">POS주문승인</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">대리점주문현황관리 &nbsp;&gt;</a></li>
-					<li><a href="#">반품정보조회</a></li>
+					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
+					<li><a href="#">POS주문승인</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -141,23 +141,25 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 110px;">구분</th>
-							<td>
-								<div class="align_abreast">
-									<div class="sel_area">
-										<select name="" id="" class="sel_box" style="min-width: 140px;">
-											<option value="">주문일자</option>
-											<option value="">반품일자</option>
-										</select>
-									</div>
-								</div>
-							</td>
-							<th style="width: 110px;">일시</th>
+							<th style="width: 110px;">인수확인년월</th>
 							<td>
 								<div class="datepicker">
 									<input type="text" class="date_from" id="from" name="from">
 									<span>~</span>
 									<input type="text" class="date_to" id="to" name="to">
+								</div>
+							</td>
+							<th style="width: 110px;">출고유형</th>
+							<td>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전채</option>
+											<option value="">본사판매</option>
+											<option value="">본사비품</option>
+											<option value="">본사할부</option>
+										</select>
+									</div>
 								</div>
 							</td>
 						</tr>
@@ -169,7 +171,28 @@
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
-								
+							</td>
+							<th>승인유형</th>
+							<td>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">승인</option>
+											<option value="">거절</option>
+											<option value="">대기</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>인수처코드</th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<button type="submit" class="btn xs gray sch">검색</button>
+								</div>
 							</td>
 							<th>프로젝트코드</th>
 							<td>
@@ -181,36 +204,9 @@
 							</td>
 						</tr>
 						<tr>
-							<th>단말기모델명</th>
+							<th>가맹점명</th>
 							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-
-									<span class="rdio_area">
-										<input type="radio" name="admission" id="all" checked>
-										<label for="all">전체</label>
-										<input type="radio" name="admission" id="product1">
-										<label for="product1">단말기</label>
-										<input type="radio" name="admission" id="product2">
-										<label for="product2">정유사단말기</label>
-										<input type="radio" name="admission" id="product3">
-										<label for="product3">포스</label>
-										<input type="radio" name="admission" id="product4">
-										<label for="product4">기타</label>
-									</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>인수처코드</th>
-							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 							</td>
 						</tr>
 					</tbody>
@@ -241,220 +237,242 @@
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 150px;">주문번호</th>
-							<th style="width: 150px;">인수처코드</th>
-							<th style="width: 200px;">인수처명</th>
-							<th style="width: 150px;">주문처코드</th>
-							<th style="width: 200px;">주문처명</th>
-							<th style="width: 150px;">단말기코드</th>
-							<th style="width: 150px;">단말기명</th>
-							<th style="width: 120px;">프로젝트코드</th>
-							<th style="width: 100px">주문일자</th>
-							<th style="width: 100px;">주문시간</th>
-							<th style="width: 100px;">반품수량</th>
-							<th style="width: 120px;">단말기환산수량</th>
-							<th style="width: 120px;">반품환산수량</th>
-							<th style="width: 250px;">반품사유</th>
-							<th style="width: 100px;">반품일자</th>
-							<th style="width: 180px;">반품시간</th>
-							<th style="width: 200px;">반품아이디</th>
+							<th style="width: 100px;">승인여부</th>
+							<th style="width: 200px;">거절사유</th>
+							<th style="width: 150px;">프로젝트코드</th>
+							<th style="width: 200px;">프로젝트명</th>
+							<th style="width: 150px;">모델명</th>
+							<th style="width: 100px;">주문수량</th>
+							<th style="width: 120px;">인수처코드</th>
+							<th style="width: 150px;">인수처명</th>
+							<th style="width: 130px;">주문번호</th>
+							<th style="width: 130px;">일련번호</th>
+							<th style="width: 100px;">영업팀</th>
+							<th style="width: 100px;">영업담당자</th>
+							<th style="width: 120px;">주문일시</th>
+							<th style="width: 100px;">결제정보</th>
+							<th style="width: 130px;">주문처코드</th>
+							<th style="width: 150px;">주문처명</th>
+							<th style="width: 150px;">가맹점명</th>
+							<th style="width: 100px;">출고유형</th>
+							<th style="width: 120px;">출고일자</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="17" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="19" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 						<tr>
-							<td>주문번호</td>
+							<td>승인여부</td>
+							<td>거절사유</td>
+							<td>프로젝트코드</td>
+							<td>프로젝트명</td>
+							<td>모델명</td>
+							<td>주문수량</td>
 							<td>인수처코드</td>
 							<td>인수처명</td>
+							<td>주문번호</td>
+							<td>일련번호</td>
+							<td>영업팀</td>
+							<td>영업담당자</td>
+							<td>주문일시</td>
+							<td>결제정보</td>
 							<td>주문처코드</td>
 							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
+							<td>가맹점명</td>
+							<td>출고유형</td>
+							<td>출고일자</td>
 						</tr>
 					</tbody>
 				</table>

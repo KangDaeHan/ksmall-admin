@@ -127,11 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">반품정보조회</h2>
+				<h2 class="sprite_before tit">POS주문관리</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">대리점주문현황관리 &nbsp;&gt;</a></li>
-					<li><a href="#">반품정보조회</a></li>
+					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
+					<li><a href="#">POS주문관리</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -141,76 +141,196 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 110px;">구분</th>
+							<th style="width: 130px;">주문날짜</th>
+							<td>2019년 9월 20일</td>
+							<th style="width: 130px;">담당영업팀 <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
 									<div class="sel_area">
 										<select name="" id="" class="sel_box" style="min-width: 140px;">
-											<option value="">주문일자</option>
-											<option value="">반품일자</option>
+											<option value="">인프라영업팀</option>
+											<option value="">PG사업팀</option>
+											<option value="">제휴영업팀</option>
+											<option value="">채널영업팀</option>
+											<option value="">유통망영업팀</option>
+											<option value="">법인영업팀</option>
 										</select>
 									</div>
 								</div>
 							</td>
-							<th style="width: 110px;">일시</th>
+						</tr>
+						<tr>
+							<th>담당영업사원 <span class="point">*</span></th>
 							<td>
-								<div class="datepicker">
-									<input type="text" class="date_from" id="from" name="from">
-									<span>~</span>
-									<input type="text" class="date_to" id="to" name="to">
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">선택하세요</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<th>제조사 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">선택하세요</option>
+											<option value="">에어포스</option>
+											<option value="">대진포스(포스뱅크)</option>
+											<option value="">솔비포스(HPPOS)</option>
+											<option value="">오케이포스</option>
+											<option value="">파트너텍코리아(주)</option>
+											<option value="">스카이씨엔에스</option>
+											<option value="">(주)KS넷트웍스</option>
+											<option value="">(주)카드뱅크코리아</option>
+											<option value="">한국전자금융</option>
+											<option value="">KSI(밸크리텍)</option>
+											<option value="">와이즈웨어</option>
+											<option value="">성화정보텍(포스뱅크)</option>
+											<option value="">케이에스넷</option>
+											<option value="">핀테크코리아</option>
+											<option value="">참텔레콤</option>
+											<option value="">대진포스(아임유)</option>
+											<option value="">카스</option>
+											<option value="">시원아이티</option>
+											<option value="">(주)비티씨씨큐</option>
+											<option value="">신도에이스</option>
+											<option value="">엠앤서비스</option>
+										</select>
+									</div>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>주문처코드</th>
+							<th>품목명 <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">선택하세요</option>
+										</select>
+									</div>
 								</div>
-								
 							</td>
-							<th>프로젝트코드</th>
+							<th>수량 <span class="point">*</span></th>
 							<td>
 								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
+									<span class="txt">대</span>
+									<span class="txt f_red">재고수량: 대</span>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>단말기모델명</th>
+							<th>추가주문여부</th>
+							<td>
+								<div class="">
+									<input type="checkbox" name="" />
+								</div>
+							</td>
+							<th>거래유형 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">본사판매</option>
+											<option value="">본사비품</option>
+											<option value="">본사할부</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>주문처코드 <span class="point">*</span></th>
 							<td colspan="3">
-								<div class="align_abreast">
+								<div class="align_abreast wid129">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>인수처코드 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast wid129">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<button type="submit" class="btn xs gray sch">검색</button>
+								</div>
+							</td>
+							<th>가맹점명</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th>우편번호 <span class="point">*</span></th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+							<th>연락처 <span class="point">*</span></th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th>주소 <span class="point">*</span></th>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th>상세주소</th>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
-									<span class="rdio_area">
-										<input type="radio" name="admission" id="all" checked>
-										<label for="all">전체</label>
-										<input type="radio" name="admission" id="product1">
-										<label for="product1">단말기</label>
-										<input type="radio" name="admission" id="product2">
-										<label for="product2">정유사단말기</label>
-										<input type="radio" name="admission" id="product3">
-										<label for="product3">포스</label>
-										<input type="radio" name="admission" id="product4">
-										<label for="product4">기타</label>
-									</span>
+			<div class="tbl_area">
+				<table class="tbl_row">
+					<tbody>
+						<tr>
+							<th style="width: 130px;">배송지정보</th>
+							<td>
+								<div class="">
+									<input type="checkbox" name="" id="order_post"/>
+									<label for="order_post">인수처 대리점 주소와 동일</label>
+									<a href="#" class="btn xs gray">최근배송지</a>
+								</div>
+							</td>
+							<th style="width: 130px;">배송지 상호명</th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th>배송지연락처 <span class="point">*</span></th>
+							<td>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+							<th>배송지 우편번호 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>인수처코드</th>
+							<th>배송지 주소 <span class="point">*</span></th>
 							<td colspan="3">
-								<div class="align_abreast">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<th>배송지 상세주소</th>
+							<td colspan="3">
+								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 							</td>
 						</tr>
 					</tbody>
@@ -218,269 +338,10 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
+				<button type="button" class="btn sm sch">제품등록</button>
+				<button type="button" class="btn sm sch">초기화</button>
 			</div>
 			<!-- //조회 영역 -->
-
-			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
-				<div class="right">
-					<div class="sel_area">
-						<select name="" id="" class="sel_box">
-							<option value="">10개</option>
-							<option value="">20개</option>
-							<option value="">30개</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll">
-				<table class="tbl_col">
-					<thead>
-						<tr>
-							<th style="width: 150px;">주문번호</th>
-							<th style="width: 150px;">인수처코드</th>
-							<th style="width: 200px;">인수처명</th>
-							<th style="width: 150px;">주문처코드</th>
-							<th style="width: 200px;">주문처명</th>
-							<th style="width: 150px;">단말기코드</th>
-							<th style="width: 150px;">단말기명</th>
-							<th style="width: 120px;">프로젝트코드</th>
-							<th style="width: 100px">주문일자</th>
-							<th style="width: 100px;">주문시간</th>
-							<th style="width: 100px;">반품수량</th>
-							<th style="width: 120px;">단말기환산수량</th>
-							<th style="width: 120px;">반품환산수량</th>
-							<th style="width: 250px;">반품사유</th>
-							<th style="width: 100px;">반품일자</th>
-							<th style="width: 180px;">반품시간</th>
-							<th style="width: 200px;">반품아이디</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 등록된 내용 없을 시 -->
-						<!-- <tr>
-							<td colspan="17" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
-						</tr> -->
-						<!-- //등록된 내용 없을 시 -->
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-						<tr>
-							<td>주문번호</td>
-							<td>인수처코드</td>
-							<td>인수처명</td>
-							<td>주문처코드</td>
-							<td>주문처명</td>
-							<td>단말기코드</td>
-							<td>단말기명</td>
-							<td>프로젝트코드</td>
-							<td>주문일자</td>
-							<td>주문시간</td>
-							<td>반품수량</td>
-							<td>단말기환산수량</td>
-							<td>반품환산수량</td>
-							<td>반품사유</td>
-							<td>반품일자</td>
-							<td>반품시간</td>
-							<td>반품아이디</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- //리스트 -->
-
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
-				</div>
-			</div>
-			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -669,7 +530,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-	// tab('.terms_tab', 'null'); //현재 활성화 시킬 탭메뉴
+
 });
 </script>
 </body>

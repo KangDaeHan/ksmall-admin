@@ -309,6 +309,16 @@ input[type="checkbox"] + label , input[type="radio"] + label {
 	bottom: 0;
 	right: 0;
 }
+.tbl_top_util .right .sel_area {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tbl_top_util .right .btn.sm {
+	padding: 0 15px;
+	font-size: 12px;
+	line-height: 28px;
+}
+
 table {
 	width: 100%;
 	border-bottom: 1px solid #ddd;
@@ -1075,6 +1085,9 @@ button {
 }
 .bor_black {
 	border-color: #000 !important;
+}
+.align_abreast.wid129 .inpt {
+	width: 129px !important;
 }
 .align_abreast .wid177 {
 	width: 177px !important;
@@ -5036,7 +5049,13 @@ table .total_price .box .price {
 .upload_area .list .txt + .sel_area {
 	margin: 0;
 }
-
+.add_list {
+	position: relative;
+	margin-top: 10px;
+}
+.add_list .delete {
+	min-width: auto;
+}
 
 /* 기본 반응형 */
 @media all and (max-width:1830px) {
