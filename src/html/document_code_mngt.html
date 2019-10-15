@@ -127,12 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">일일발주등록</h2>
+				<h2 class="sprite_before tit">전표코드관리</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
 					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">일일발주등록</a></li>
+					<li><a href="#">전표코드관리</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -142,57 +141,29 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 140px;">주문처코드 <span class="point">*</span></th>
+							<th style="width: 110px;">조회구분</th>
 							<td>
-								<div class="align_abreast wid129">
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">전표코드</option>
+											<option value="">전표명</option>
+										</select>
+									</div>
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
-							<th style="width: 140px;">인수처코드 <span class="point">*</span></th>
+							<th style="width: 110px;">단종여부</th>
 							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>우편번호 <span class="point">*</span></th>
-							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-							<th>연락처</th>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주소 <span class="point">*</span></th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>상세주소</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주문내역 <span class="point">*</span></th>
-							<td colspan="3">
-								<button type="button" class="btn add gray">추가</button>
-								<div class="align_abreast add_list">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">박스</span>
-									<!-- <button type="button" class="btn delete">삭제</button> -->
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">Y</option>
+											<option value="">N</option>
+										</select>
+									</div>
 								</div>
 							</td>
 						</tr>
@@ -201,10 +172,169 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">등록</button>
-				<button type="button" class="btn sm sch">취소</button>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
 			<!-- //조회 영역 -->
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<a href="#" class="btn sm gray">등록</a>
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 100px;">전표코드</th>
+							<th style="width: 200px;">전표명</th>
+							<th style="width: 150px;">박스당건수</th>
+							<th style="width: 200px;">대체출고 박스당건수</th>
+							<th style="width: 200px;">단종여부</th>
+							<th style="width: 100px;">확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="6" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+						<tr>
+							<td><a href="#" class="bold">RE002</a></td>
+							<td>대형전표박스</td>
+							<td>100</td>
+							<td>100</td>
+							<td>N</td>
+							<td>
+								<button type="button" class="btn xs gray">삭제</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -393,7 +523,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-
+	// tab('.terms_tab', 'null'); //현재 활성화 시킬 탭메뉴
 });
 </script>
 </body>

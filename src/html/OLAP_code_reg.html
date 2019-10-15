@@ -127,12 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">일일발주등록</h2>
+				<h2 class="sprite_before tit">전표코드 OLAP코드 등록</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">일일발주등록</a></li>
+					<li><a href="#">전표관리관리 &nbsp;&gt;</a></li>
+					<li><a href="#">전표코드 OLAP코드 등록</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -142,58 +141,24 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 140px;">주문처코드 <span class="point">*</span></th>
+							<th style="width: 160px;">전표코드 <span class="point">*</span></th>
 							<td>
-								<div class="align_abreast wid129">
+								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-							<th style="width: 140px;">인수처코드 <span class="point">*</span></th>
-							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
+									<button type="submit" onclick="layer_open('pop_sch'); return false;" class="btn xs gray sch">전표코드조회</button>
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>우편번호 <span class="point">*</span></th>
-							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-							<th>연락처</th>
+							<th style="width: 160px;">전표명 <span class="point">*</span></th>
 							<td>
 								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 							</td>
 						</tr>
 						<tr>
-							<th>주소 <span class="point">*</span></th>
-							<td colspan="3">
+							<th style="width: 160px;">OLAP단말기코드 <span class="point">*</span></th>
+							<td>
 								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>상세주소</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주문내역 <span class="point">*</span></th>
-							<td colspan="3">
-								<button type="button" class="btn add gray">추가</button>
-								<div class="align_abreast add_list">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">박스</span>
-									<!-- <button type="button" class="btn delete">삭제</button> -->
-								</div>
 							</td>
 						</tr>
 					</tbody>
@@ -201,8 +166,8 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">등록</button>
-				<button type="button" class="btn sm sch">취소</button>
+				<button type="button" class="btn sm sch">저장</button>
+				<a href="#" class="btn sm sch">돌아가기</a>
 			</div>
 			<!-- //조회 영역 -->
 
@@ -250,7 +215,7 @@
 	<div class="pop_wrap pop_sch_wrap">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">프로젝트조회</h2>
+			<h2 class="tit">전표 모델명 검색</h2>
 			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
@@ -258,8 +223,8 @@
 				<span class="name">구분</span>
 				<div class="sel_area">
 					<select name="" id="" class="sel_box">
-						<option value="">프로젝트명</option>
-						<option value="">프로젝트코드</option>
+						<option value="">전표모델명</option>
+						<option value="">전표코드</option>
 					</select>
 				</div>
 				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
@@ -288,8 +253,8 @@
 				<table class="tbl_col">
 					<thead>
 						<tr>
-							<th style="width: 170px;">프로젝트코드</th>
-							<th style="width: auto;">프로젝트명</th>
+							<th style="width: 170px;">전표코드</th>
+							<th style="width: auto;">전표모델명</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -127,12 +127,11 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">일일발주등록</h2>
+				<h2 class="sprite_before tit">OLAP코드관리</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
 					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">일일발주등록</a></li>
+					<li><a href="#">OLAP코드관리</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -142,57 +141,14 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 140px;">주문처코드 <span class="point">*</span></th>
+							<th style="width: 160px;">조회구분 <span class="point">*</span></th>
 							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-							<th style="width: 140px;">인수처코드 <span class="point">*</span></th>
-							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>우편번호 <span class="point">*</span></th>
-							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-								</div>
-							</td>
-							<th>연락처</th>
-							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주소 <span class="point">*</span></th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>상세주소</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주문내역 <span class="point">*</span></th>
-							<td colspan="3">
-								<button type="button" class="btn add gray">추가</button>
-								<div class="align_abreast add_list">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">박스</span>
-									<!-- <button type="button" class="btn delete">삭제</button> -->
+								<div class="sel_area">
+									<select name="" id="" class="sel_box">
+										<option value="">전체</option>
+										<option value="">전표코드</option>
+										<option value="">전표명</option>
+									</select>
 								</div>
 							</td>
 						</tr>
@@ -201,10 +157,138 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">등록</button>
-				<button type="button" class="btn sm sch">취소</button>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
 			<!-- //조회 영역 -->
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<a href="#" class="btn sm gray">등록</a>
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">전표코드</th>
+							<th style="width: auto;">전표명</th>
+							<th style="width: 100px;">OLAP코드</th>
+							<th style="width: 200px;">등록자</th>
+							<th style="width: 120px;">등록일자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="5" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+						<tr>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>OLAP코드</td>
+							<td>등록자</td>
+							<td>등록일자</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -244,102 +328,39 @@
 <!-- //하단영역 -->
 </div>
 
-<!-- 프로젝트 검색 팝업 -->
-<div class="ly" id="pop_sch">
+<!-- 전표 제조사 등록 팝업 -->
+<div class="ly" id="pop_document_reg">
 	<div class="bg"></div>
-	<div class="pop_wrap pop_sch_wrap">
+	<div class="pop_wrap pop_document_reg">
 		<!-- 팝업 내용 -->
 		<div class="pop_header">
-			<h2 class="tit">프로젝트조회</h2>
+			<h2 class="tit">전표 제조사 등록</h2>
 			<button type="button" class="sprite btn_pop_close">팝업닫기</button>
 		</div>
 		<div class="pop_content">
-			<div class="pop_sch_top">
-				<span class="name">구분</span>
-				<div class="sel_area">
-					<select name="" id="" class="sel_box">
-						<option value="">프로젝트명</option>
-						<option value="">프로젝트코드</option>
-					</select>
-				</div>
-				<input type="text" name="" id="" class="inpt" value="" placeholder="검색어 입력"/>
-			</div>
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
-
-			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
-				<div class="right">
-					<div class="sel_area">
-						<select name="" id="" class="sel_box">
-							<option value="">5개</option>
-							<option value="">10개</option>
-							<option value="">20개</option>
-							<option value="">30개</option>
-						</select>
-					</div>
-				</div>
-			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_scroll tbl_h262">
-				<table class="tbl_col">
-					<thead>
-						<tr>
-							<th style="width: 170px;">프로젝트코드</th>
-							<th style="width: auto;">프로젝트명</th>
-						</tr>
-					</thead>
+			<div class="tbl_area">
+				<table class="tbl_row">
 					<tbody>
-						<!-- 등록된 내용 없을 시 -->
-						<!-- <tr>
-							<td colspan="2" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
-						</tr> -->
-						<!-- //등록된 내용 없을 시 -->
 						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
+							<th style="width: 120px;">전표코드</th>
+							<td>
+								[]
 							</td>
 						</tr>
 						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>DV4005</td>
-							<td class="t_left">
-								<div class="list_btn">
-									<p class="ellip">15년2만건신규건수-SMD</p>
-									<button type="button" class="btn xs gray choice">선택</button>
+							<th style="width: 120px;">제조사 <span class="point">*</span></th>
+							<td>
+								<div class="sel_area">
+									<select name="" id="" class="sel_box">
+										<option value="">선택하세요.</option>
+										<option value="">세한비즈니스폼</option>
+										<option value="">엠앤서비스</option>
+										<option value="">조우니</option>
+										<option value="">상일전산폼</option>
+										<option value="">KSNET안성창고</option>
+										<option value="">김사웅</option>
+									</select>
 								</div>
 							</td>
 						</tr>
@@ -347,35 +368,16 @@
 				</table>
 			</div>
 			<!-- //리스트 -->
-
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
-				</div>
-			</div>
-			<!-- //페이징 -->
+			<p class="desc">※ 제조사를 두개 이상 등록 시 반드시 관리자에게 문의해 주세요.</p>
 		</div>
 		<div class="pop_footer">
+			<a href="#" class="btn sm compare">저장</a>
 			<a href="#" class="btn sm btn_pop_close">닫기</a>
 		</div>
 		<!-- //팝업 내용 -->
 	</div>
 </div>
-<!-- //프로젝트 검색 팝업 -->
+<!-- //전표 제조사 등록 팝업 -->
 
 <!-- 페이지 로딩 필요시 -->
 <div class="loading">

@@ -933,8 +933,13 @@ button {
 .ly .pop_wrap .tbl_h262 {
 	max-height: 262px;
 }
-.ly .pop_idpw_find {
+.ly .pop_idpw_find , .ly .pop_document_reg {
 	width: 500px;
+}
+.ly .pop_content .desc {
+	font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	color: #000;
 }
 
 /* 제품 확대 보기 팝업 */
