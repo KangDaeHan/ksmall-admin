@@ -127,12 +127,12 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">일일발주등록</h2>
+				<h2 class="sprite_before tit">전표주문내역조회</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
 					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">전표주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">일일발주등록</a></li>
+					<li><a href="#">신전표주문관리 &nbsp;&gt;</a></li>
+					<li><a href="#">전표주문내역조회</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
@@ -142,59 +142,91 @@
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 130px;">주문처코드 <span class="point">*</span></th>
+							<th style="width: 110px;">주문일자</th>
 							<td>
-								<div class="align_abreast wid129">
+								<div class="datepicker">
+									<input type="text" class="date_from" id="from" name="from">
+									<span>~</span>
+									<input type="text" class="date_to" id="to" name="to">
+								</div>
+							</td>
+							<th style="width: 110px;">주문처코드</th>
+							<td>
+								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
-							<th style="width: 130px;">인수처코드 <span class="point">*</span></th>
+						</tr>
+						<tr>
+							<th>인수처코드</th>
 							<td>
-								<div class="align_abreast wid129">
+								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<button type="submit" class="btn xs gray sch">검색</button>
 								</div>
 							</td>
-						</tr>
-						<tr>
-							<th>우편번호 <span class="point">*</span></th>
+							<th>제조사</th>
 							<td>
-								<div class="align_abreast wid129">
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<button type="submit" class="btn xs gray sch">검색</button>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">세한비즈니스폼</option>
+											<option value="">엠앤서비스</option>
+											<option value="">조우니</option>
+											<option value="">상일전산폼</option>
+											<option value="">KSNET안성창고</option>
+											<option value="">김사웅</option>
+										</select>
+									</div>
 								</div>
 							</td>
-							<th>연락처</th>
+						</tr>
+						<tr>
+							<th>승인여부</th>
 							<td>
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">전체</option>
+											<option value="">승인</option>
+											<option value="">미승인</option>
+										</select>
+									</div>
+								</div>
+							</td>
+							<th>담당부서</th>
+							<td>
+								<div class="align_abreast">
+									<div class="sel_area">
+										<select name="" id="" class="sel_box" style="min-width: 140px;">
+											<option value="">선택하세요.</option>
+											<option value="">영업팀</option>
+											<option value="">지원팀</option>
+										</select>
+									</div>
+								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>주소 <span class="point">*</span></th>
+							<th>전표코드</th>
 							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>상세주소</th>
-							<td colspan="3">
-								<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-							</td>
-						</tr>
-						<tr>
-							<th>주문내역 <span class="point">*</span></th>
-							<td colspan="3">
-								<button type="button" class="btn add gray">추가</button>
-								<div class="align_abreast add_list">
+								<div class="align_abreast">
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 									<button type="submit" class="btn xs gray sch">검색</button>
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
-									<span class="txt">박스</span>
-									<!-- <button type="button" class="btn delete">삭제</button> -->
+
+									<span class="rdio_area">
+										<input type="radio" name="admission" id="all" checked>
+										<label for="all">전체</label>
+										<input type="radio" name="admission" id="product1">
+										<label for="product1">정기출고</label>
+										<input type="radio" name="admission" id="product2">
+										<label for="product2">일일출고</label>
+									</span>
 								</div>
 							</td>
 						</tr>
@@ -203,10 +235,314 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">등록</button>
-				<button type="button" class="btn sm sch">취소</button>
+				<button type="button" class="btn sm sch">조회</button>
 			</div>
 			<!-- //조회 영역 -->
+
+			<div class="tbl_top_util">
+				<div class="left">
+					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
+				</div>
+				<div class="right">
+					<a href="#" class="btn sm gray">일일발주등록</a>
+					<div class="sel_area">
+						<select name="" id="" class="sel_box">
+							<option value="">10개</option>
+							<option value="">20개</option>
+							<option value="">30개</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="tbl_area tbl_scroll">
+				<table class="tbl_col">
+					<thead>
+						<tr>
+							<th style="width: 150px;">주문번호</th>
+							<th style="width: 100px;">주문일자</th>
+							<th style="width: 150px;">통합대리점코드</th>
+							<th style="width: 200px;">통합대리점명</th>
+							<th style="width: 200px;">자대리점코드</th>
+							<th style="width: 200px;">자대리점명</th>
+							<th style="width: 100px;">출고종류</th>
+							<th style="width: 200px;">전표코드</th>
+							<th style="width: 200px">전표명</th>
+							<th style="width: 100px;">승인수량</th>
+							<th style="width: 100px;">건수별주문가능수량</th>
+							<th style="width: 100px;">주문요청건</th>
+							<th style="width: 100px;">주문승인건</th>
+							<th style="width: 100px;">거래상태</th>
+							<th style="width: 100px;">출고일자</th>
+							<th style="width: 200px;">거절사유</th>
+							<th style="width: 120px;">승인유저</th>
+							<th style="width: 120px;">취소유저</th>
+							<th style="width: 150px;">제조사명</th>
+							<th style="width: 100px;">담당부서</th>
+							<th style="width: 150px;">기타</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- 등록된 내용 없을 시 -->
+						<!-- <tr>
+							<td colspan="21" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+						</tr> -->
+						<!-- //등록된 내용 없을 시 -->
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+						<tr>
+							<td>주문번호</td>
+							<td>주문일자</td>
+							<td>통합대리점코드</td>
+							<td>통합대리점명</td>
+							<td>자대리점코드</td>
+							<td>자대리점명</td>
+							<td>출고종류</td>
+							<td>전표코드</td>
+							<td>전표명</td>
+							<td>승인수량</td>
+							<td>건수별주문가능수량</td>
+							<td>주문요청건</td>
+							<td>주문승인건</td>
+							<td>거래상태</td>
+							<td>출고일자</td>
+							<td>거절사유</td>
+							<td>승인유저</td>
+							<td>취소유저</td>
+							<td>제조사명</td>
+							<td>담당부서</td>
+							<td>기타</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //리스트 -->
+
+			<!-- 페이징 -->
+			<div class="paginate_box">
+				<div class="paginate_complex">
+					<a href="#" class="sprite dipolyion first_prev">처음</a>
+					<a href="#" class="sprite dipolyion prev">이전</a>
+					<a href="#" class="">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<strong>5</strong>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="sprite dipolyion next">다음</a>
+					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				</div>
+			</div>
+			<!-- //페이징 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->
@@ -395,7 +731,7 @@
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
 $(document).ready(function() {
-
+	// tab('.terms_tab', 'null'); //현재 활성화 시킬 탭메뉴
 });
 </script>
 </body>

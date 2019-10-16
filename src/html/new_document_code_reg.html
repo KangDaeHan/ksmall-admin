@@ -127,32 +127,85 @@
 			
 			<!-- 서브 타이틀 -->
 			<div class="sub_comm_top">
-				<h2 class="sprite_before tit">OLAP코드관리</h2>
+				<h2 class="sprite_before tit">전표코드등록</h2>
 				<ul class="location">
 					<li><a href="#">HOME &nbsp;&gt;</a></li>
-					<li><a href="#">본사주문관리 &nbsp;&gt;</a></li>
-					<li><a href="#">OLAP코드관리</a></li>
+					<li><a href="#">전표관리관리 &nbsp;&gt;</a></li>
+					<li><a href="#">전표코드등록</a></li>
 				</ul>
 			</div>
 			<!-- //서브 타이틀 -->
 			
 			<!-- 조회 영역 -->
-			<div class="tbl_area">
+			<div class="tbl_area tbl_layout_auto">
 				<table class="tbl_row">
 					<tbody>
 						<tr>
-							<th style="width: 160px;">조회구분 <span class="point">*</span></th>
-							<td>
+							<th style="width: 160px;">전표코드 <span class="point">*</span></th>
+							<td colspan="3">
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<button type="submit" class="btn xs gray sch">중복확인</button>
+									<span class="txt f_red">(※ 전표코드는 수정 하실 수 없습니다.)</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 160px;">전표종류 <span class="point">*</span></th>
+							<td colspan="3">
 								<div class="align_abreast">
 									<div class="sel_area">
 										<select name="" id="" class="sel_box" style="min-width: 140px;">
-											<option value="">전체</option>
-											<option value="">전표코드</option>
-											<option value="">전표명</option>
+											<option value="">선택하세요</option>
+											<option value="">DDC</option>
+											<option value="">DESC</option>
+											<option value="">주유소</option>
+											<option value="">코드에러</option>
 										</select>
 									</div>
-									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="txt f_red">(※ 전표종류는 수정 하실 수 없습니다.)</span>
 								</div>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 160px;">전표명 <span class="point">*</span></th>
+							<td colspan="3">
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="txt">(예:광고전표3in-2P)</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 160px;">박스당 승인건수 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="txt">건</span>
+								</div>
+							</td>
+							<th style="width: 160px;">박스당 대체승인건수 <span class="point">*</span></th>
+							<td>
+								<div class="align_abreast">
+									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
+									<span class="txt">건</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th style="width: 160px;">약정차감여부</th>
+							<td>
+								<input type="radio" name="stipulation" id="stip_yes">
+								<label for="stip_yes">예</label>
+								<input type="radio" name="stipulation" id="stip_no" checked>
+								<label for="stip_no">아니오</label>
+							</td>
+							<th style="width: 160px;">단종여부</th>
+							<td>
+								<input type="radio" name="admission" id="yes">
+								<label for="yes">예</label>
+								<input type="radio" name="admission" id="no" checked>
+								<label for="no">아니오</label>
 							</td>
 						</tr>
 					</tbody>
@@ -160,16 +213,18 @@
 			</div>
 
 			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
+				<button type="button" class="btn sm sch">저장</button>
+				<button type="button" class="btn sm sch">돌아가기</button>
 			</div>
 			<!-- //조회 영역 -->
 
+			<div class="sub_comm_tit">
+				<h2>전표코드 제조사 등록내역</h2>
+			</div>
+
 			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
 				<div class="right">
-					<a href="#" class="btn sm gray">등록</a>
+					<a href="#" onclick="layer_open('pop_document_reg'); return false;" class="btn sm gray">등록</a>
 					<div class="sel_area">
 						<select name="" id="" class="sel_box">
 							<option value="">10개</option>
@@ -185,86 +240,86 @@
 					<thead>
 						<tr>
 							<th style="width: 150px;">전표코드</th>
-							<th style="width: auto;">전표명</th>
-							<th style="width: 100px;">OLAP코드</th>
-							<th style="width: 200px;">등록자</th>
+							<th style="width: 200px;">제조사코드</th>
+							<th style="width: auto;">제조사명</th>
+							<th style="width: 200px;">등록유저</th>
 							<th style="width: 120px;">등록일자</th>
 						</tr>
 					</thead>
 					<tbody>
 						<!-- 등록된 내용 없을 시 -->
 						<!-- <tr>
-							<td colspan="5" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							<td colspan="6" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
 						</tr> -->
 						<!-- //등록된 내용 없을 시 -->
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 						<tr>
 							<td>전표코드</td>
-							<td>전표명</td>
-							<td>OLAP코드</td>
-							<td>등록자</td>
+							<td>제조사코드</td>
+							<td>제조사명</td>
+							<td>등록유저</td>
 							<td>등록일자</td>
 						</tr>
 					</tbody>

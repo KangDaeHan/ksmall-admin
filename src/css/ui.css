@@ -385,6 +385,9 @@ table textarea {
 	border-color: #3c3d3e;
 	font-family: "Noto Sans Korean" , sans-serif;
 }
+.tbl_layout_auto table {
+	table-layout: auto;
+}
 .tbl_row th {
 	background: #ededed;
 	border-top: 1px solid #cfcfcf;
@@ -443,7 +446,6 @@ table td .inpt {
 }
 .tbl_col {
 	word-break: break-all;
-	white-space: nowrap;
 	table-layout: fixed;
 }
 .tbl_scroll {
