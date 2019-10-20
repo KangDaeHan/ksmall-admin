@@ -4240,7 +4240,7 @@ button {
 	width: 70px;
 	height: 25px;
 	background: #f4f4f4;
-	border: 1px solid #e1e1e1;
+	border: 1px solid #e1e1e1 !important;
 	text-indent: -9999px;
 	overflow: hidden;
 }
@@ -5164,6 +5164,22 @@ table .total_price .box .price {
 	margin-top: -7px;
 }
 
+.menu_wrap {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+}
+.menu_wrap .tree_area , .menu_wrap .tbl_area {
+	width: 40%;
+}
+.menu_wrap .tree_area {
+	border: 1px solid #cfcfcf;
+	overflow: auto;
+}
+.menu_wrap .tbl_area {
+	width: 60%;
+	margin: 0;
+}
 
 /* 기본 반응형 */
 @media all and (max-width:1830px) {
