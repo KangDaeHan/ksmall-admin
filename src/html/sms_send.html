@@ -145,6 +145,11 @@
 							<td>
 								<input type="checkbox" name="all_chk" id="all" />
 								<label for="all">전체</label>
+							</td>
+						</tr>
+						<tr>
+							<th>장애등급</th>
+							<td>
 								<ul class="chk_list">
 									<li><input type="checkbox" name="" id="" /> <label for="">1-[infra+]</label></li>
 									<li><input type="checkbox" name="" id="" /> <label for="">2-[infra-]</label></li>
@@ -178,6 +183,9 @@
 									<li><input type="checkbox" name="" id="" /> <label for="">60-네이버장애전파</label></li>
 									<li><input type="checkbox" name="" id="" /> <label for="">100-K-Smart 장애/특이사항발송용</label></li>
 								</ul>
+								<div class="btn_area btn_sms">
+									<button type="button" class="btn sm sch">조회</button>
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -201,204 +209,179 @@
 				</table>
 			</div>
 
-			<div class="btn_area">
-				<button type="button" class="btn sm sch">조회</button>
-			</div>
 			<!-- //조회 영역 -->
 
 			<div class="tbl_top_util">
-				<div class="left">
-					<button type="button" class="btn sm sprite_after download">엑셀다운로드</button>
-				</div>
 				<div class="right">
 					<a href="#" class="btn sm">취소</a>
 					<a href="#" class="btn sm gray">전송</a>
-					<div class="sel_area">
-						<select name="" id="" class="sel_box">
-							<option value="">10개</option>
-							<option value="">20개</option>
-							<option value="">30개</option>
-						</select>
-					</div>
 				</div>
 			</div>
 			<!-- 리스트 -->
-			<div class="tbl_area tbl_no_scroll">
-				<table class="tbl_col">
-					<thead>
-						<tr>
-							<th style="width: 50px;"><input type="checkbox" name="" id="" /></th>
-							<th style="width: 150px;">성명</th>
-							<th style="width: 200px;">회사</th>
-							<th style="width: 150px;">부서</th>
-							<th style="width: 120px;">팀</th>
-							<th style="width: 100px;">직급</th>
-							<th style="width: 135px;">핸드폰번호</th>
-							<th style="width: 130px;">장애종류</th>
-							<th style="width: 250px;">문자내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- 등록된 내용 없을 시 -->
-						<!-- <tr>
-							<td colspan="9" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
-						</tr> -->
-						<!-- //등록된 내용 없을 시 -->
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="" id="" /></td>
-							<td>성명</td>
-							<td>회사</td>
-							<td>부서</td>
-							<td>팀</td>
-							<td>직급</td>
-							<td>010-1234-1234</td>
-							<td>장애종류</td>
-							<td>
-								문자내역
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- //리스트 -->
+			<div class="dual_tbl_wrap">
+				<div class="tbl_area tbl_scroll">
+					<table class="tbl_col">
+						<thead>
+							<tr>
+								<th style="width: 130px;">장애종류</th>
+								<th style="width: auto;">문자내역</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 등록된 내용 없을 시 -->
+							<!-- <tr>
+								<td colspan="2" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							</tr> -->
+							<!-- //등록된 내용 없을 시 -->
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+							<tr>
+								<td>장애종류</td>
+								<td>
+									문자내역
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
-			<!-- 페이징 -->
-			<div class="paginate_box">
-				<div class="paginate_complex">
-					<a href="#" class="sprite dipolyion first_prev">처음</a>
-					<a href="#" class="sprite dipolyion prev">이전</a>
-					<a href="#" class="">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<strong>5</strong>
-					<a href="#">6</a>
-					<a href="#">7</a>
-					<a href="#">8</a>
-					<a href="#">9</a>
-					<a href="#">10</a>
-					<a href="#" class="sprite dipolyion next">다음</a>
-					<a href="#" class="sprite dipolyion last_next">마지막</a>
+				<div class="tbl_area tbl_scroll">
+					<table class="tbl_col">
+						<thead>
+							<tr>
+								<th style="width: 50px;"><input type="checkbox" name="" id="" /></th>
+								<th style="width: 80px;">성명</th>
+								<th style="width: 100px;">회사</th>
+								<th style="width: 100px;">부서</th>
+								<th style="width: 100px;">팀</th>
+								<th style="width: 80px;">직급</th>
+								<th style="width: 135px;">핸드폰번호</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 등록된 내용 없을 시 -->
+							<!-- <tr>
+								<td colspan="7" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+							</tr> -->
+							<!-- //등록된 내용 없을 시 -->
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id="" /></td>
+								<td>성명</td>
+								<td>회사</td>
+								<td>부서</td>
+								<td>팀</td>
+								<td>직급</td>
+								<td>010-1234-1234</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
-			<!-- //페이징 -->
+			
+			<!-- //리스트 -->
 
 		</div>
 		<!-- //서브 컨텐츠 -->

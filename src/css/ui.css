@@ -5181,62 +5181,50 @@ table .total_price .box .price {
 	margin: 0;
 }
 
+.btn_sms {
+	margin: 20px 0 10px;
+}
+.btn_sms .btn {
+	border-color: #0f88ff !important;
+}
+
+.dual_tbl_wrap {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.dual_tbl_wrap .tbl_area {
+	width: 49%;
+	max-height: 433px;
+	overflow-x: hidden;
+}
+.dual_tbl_wrap .tbl_area table {
+	table-layout: auto;
+}
+.dual_tbl_wrap .tbl_area table th , .dual_tbl_wrap .tbl_area table td {
+	padding: 16px 5px;
+	height: 48px;
+}
+.dual_tbl_wrap .tbl_area table input[type='checkbox'] {
+	margin: 0;
+}
+
+
+
+
+
+
 /* 기본 반응형 */
 @media all and (max-width:1830px) {
-	.intro_section .section .cont.on .title_on .tit, .intro_section .section .cont.active .title_on .tit {
-		bottom: 50px;
-		font-size: 35px;
-	}
-	.intro_section .section .cont.on .title_on .name, .intro_section .section .cont.active .title_on .name {
-		font-size: 17px;
-		line-height: 50px;
-	}
-	.intro_section .section .cont.on .title_on .link .btn, .intro_section .section .cont.active .title_on .link .btn {
-		min-width: 70px;
-		font-size: 12px;
-		line-height: 50px;
-	}
+	
 }
 
 @media all and (max-width:1600px) {
-	.ly .pop_intro {
-		width: 85%;
-	}
-	.intro_section .section , .intro_section .section .cont , .intro_section .section .cont .area , .intro_section .section .cont .area img {
-		height: 260px;
-	}
-	.intro_section .section .cont .area img {
-		max-height: 260px;
-	}
-	.intro_section .section .cont.on .title_on .tit, .intro_section .section .cont.active .title_on .tit {
-		font-size: 25px;
-	}
+	
 }
 
 @media all and (max-width:1410px) {
-	.footer .inner .utill {
-		position: static;
-		margin: 10px 0 0 0;
-	}
-	.footer .inner .utill .utill_list li:first-child {
-		margin-left: 0;
-	}
 
-	.intro_banner {
-		bottom: 114px !important;
-	}
-
-	.tp-banner-container .btn_detail {
-		padding: 0 2.2rem;
-		border-radius: 2.2rem;
-		font-size: 1.3rem;
-		line-height: 3.3rem;
-	}
-
-	.sub_wrap .footer .inner .utill , .wrap .footer .inner .utill {
-		position: absolute;
-		margin: 0;
-	}
 }
 
 @media all and (max-width:878px) {
