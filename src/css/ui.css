@@ -2303,11 +2303,27 @@ button {
 	position: absolute;
 	top: 50%;
 	left: 10px;
-	width: 25px;
-	height: 25px;
-	margin-top: -12.5px;
-	border: 2px solid #bababa;
-	background: none;
+	width: 26px;
+	height: 26px;
+	margin-top: -13px;
+}
+.side .menu_list > li.menu1 .icon {
+	background-position: -14px -380px;
+}
+.side .menu_list > li.menu2 .icon {
+	background-position: -60px -380px;
+}
+.side .menu_list > li.menu3 .icon {
+	background-position: -106px -380px;
+}
+.side .menu_list > li.menu4 .icon {
+	background-position: -152px -380px;
+}
+.side .menu_list > li.menu5 .icon {
+	background-position: -198px -380px;
+}
+.side .menu_list > li.menu6 .icon {
+	background-position: -244px -380px;
 }
 .side .menu_list > li .txt {
 	display: block;
@@ -2451,8 +2467,26 @@ button {
 }
 .expansion .side .menu_list > li .icon {
 	left: 50%;
-	margin-left: -12.5px;
+	margin-left: -16px;
 	border-color: #fff;
+}
+.expansion .side .menu_list > li.menu1 .icon {
+	background-position: -14px -412px;
+}
+.expansion .side .menu_list > li.menu2 .icon {
+	background-position: -60px -412px;
+}
+.expansion .side .menu_list > li.menu3 .icon {
+	background-position: -106px -412px;
+}
+.expansion .side .menu_list > li.menu4 .icon {
+	background-position: -152px -412px;
+}
+.expansion .side .menu_list > li.menu5 .icon {
+	background-position: -198px -412px;
+}
+.expansion .side .menu_list > li.menu6 .icon {
+	background-position: -244px -412px;
 }
 .expansion .side .menu_list li {
 	position: relative;
