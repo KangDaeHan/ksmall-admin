@@ -254,7 +254,25 @@
 									<input type="text" class="inpt" name="" id="" value="" placeholder="" />
 								</div>
 							</td>
-						</tr>
+                        </tr>
+                        <tr>
+                            <th>제품매뉴얼</th>
+                            <td>
+                                <div id="manual_upload" class="filebox preview_image" style="width: auto;">
+									<input class="upload_name" placeholder="파일선택"/>
+									<label for="manual_file_upload" onclick="fileUpLoad('manual_file_upload','manual_upload');" >파일선택</label>
+									<input type="file" id="manual_file_upload" class="upload-hidden" />
+								</div>
+                            </td>
+                            <th>제품홍보자료</th>
+                            <td>
+                                <div id="marketing_upload" class="filebox preview_image" style="width: auto;">
+									<input class="upload_name" placeholder="파일선택"/>
+									<label for="marketing_file_upload" onclick="fileUpLoad('marketing_file_upload','marketing_upload');" >파일선택</label>
+									<input type="file" id="marketing_file_upload" class="upload-hidden" />
+								</div>
+                            </td>
+                        </tr>
 						<tr>
 							<th>제품특징 <span class="point">*</span></th>
 							<td colspan="3">
