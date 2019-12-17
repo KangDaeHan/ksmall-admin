@@ -5116,8 +5116,9 @@ table .total_price .box .price {
 	overflow: hidden;
 }
 .upload_area .list {
-	flex: 1;
+	min-width: 160px;
 	padding: 0 10px 0 0;
+	margin-bottom: 10px;
 }
 .upload_area .list .txt {
 	width: 80px;
