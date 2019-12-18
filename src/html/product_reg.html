@@ -557,8 +557,8 @@
 									<li><span class="point">*</span> 본 제품과 연관되어 있는 상품을 확인 후 선택해 주세요!</li>
 								</ul>
 
-								<div class="upload_area">
-									<div class="list"> 
+								<div class="upload_area add_relation_area">
+									<div class="list">
 										<p class="txt">연관상품1</p>
 										<div class="sel_area">
 											<select name="" id="" class="sel_box" style="min-width: 140px;">
@@ -575,85 +575,11 @@
 												<option value="">제품3</option>
 											</select>
 										</div>
+										<a href="#" class="sprite btn_delete">닫기</a>
 									</div>
-
-									<div class="list">
-										<p class="txt">연관상품2</p>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">유선단말기</option>
-												<option value="">무선단말기</option>
-												<option value="">POS</option>
-											</select>
-										</div>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">제품0</option>
-												<option value="">제품1</option>
-												<option value="">제품2</option>
-												<option value="">제품3</option>
-											</select>
-										</div>
-									</div> 
-
-									<div class="list">
-										<p class="txt">연관상품3</p>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">유선단말기</option>
-												<option value="">무선단말기</option>
-												<option value="">POS</option>
-											</select>
-										</div>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">제품0</option>
-												<option value="">제품1</option>
-												<option value="">제품2</option>
-												<option value="">제품3</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="list">
-										<p class="txt">연관상품4</p>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">유선단말기</option>
-												<option value="">무선단말기</option>
-												<option value="">POS</option>
-											</select>
-										</div>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">제품0</option>
-												<option value="">제품1</option>
-												<option value="">제품2</option>
-												<option value="">제품3</option>
-											</select>
-										</div>
-									</div> 
-
-									<div class="list">
-										<p class="txt">연관상품5</p>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">유선단말기</option>
-												<option value="">무선단말기</option>
-												<option value="">POS</option>
-											</select>
-										</div>
-										<div class="sel_area">
-											<select name="" id="" class="sel_box" style="min-width: 140px;">
-												<option value="">제품0</option>
-												<option value="">제품1</option>
-												<option value="">제품2</option>
-												<option value="">제품3</option>
-											</select>
-										</div>
-									</div>
-
+									<a href="#" onclick="addRelation(2,'.btn_add_list'); return false;" class="sprite_before btn_add_list">+</a>
 								</div>
+
 							</td>
 						</tr>
 					</tbody>
@@ -853,7 +779,67 @@
 <script type="text/javascript" src="../js/jquery.monthpicker.js"></script>
 <script type="text/javascript" src="../js/ui.js"></script>
 <script>
+
+function listCount() {
+	var muList = $('.add_relation_area .list');
+	if(muList.length < 10) {
+		$('.btn_add_list').show();
+	} else {
+		$('.btn_add_list').hide();
+	}
+}
+
+function addRelation(num,el) {
+	var relationHtml = '';
+		relationHtml += '<div class="list">';
+		relationHtml += '	<p class="txt">연관상품'+ num +'</p>';
+		relationHtml += '	<div class="sel_area">';
+		relationHtml += '		<select name="" id="" class="sel_box" style="min-width: 140px;">';
+		relationHtml += '			<option value="">유선단말기</option>';
+		relationHtml += '			<option value="">무선단말기</option>';
+		relationHtml += '			<option value="">POS</option>';
+		relationHtml += '		</select>';
+		relationHtml += '	</div>';
+		relationHtml += '	<div class="sel_area">';
+		relationHtml += '		<select name="" id="" class="sel_box" style="min-width: 140px;">';
+		relationHtml += '			<option value="">제품0</option>';
+		relationHtml += '			<option value="">제품1</option>';
+		relationHtml += '			<option value="">제품2</option>';
+		relationHtml += '			<option value="">제품3</option>';
+		relationHtml += '		</select>';
+		relationHtml += '	</div>';
+		relationHtml += '	<a href="#" class="sprite btn_delete">닫기</a>';
+		relationHtml += '</div>';
+
+	$(el).before(relationHtml);
+
+	listCount();
+}
+
 $(document).ready(function() {
+
+	$(document).on('click' , '.list .txt', function(){
+		$(this).parents('.list').siblings().find(".btn_delete:visible").hide();
+
+		if ($(this).nextAll(".btn_delete").is(":hidden")) {
+			$(this).nextAll(".btn_delete").show();
+		} 
+		else {
+			$(this).nextAll(".btn_delete").hide();
+		}
+	});
+
+	$(document).on('click' , '.list .btn_delete', function(e){
+		if($('.add_relation_area .list').length > 1) {
+			$(this).parents('.list').remove();
+		} else {
+			alert('상품 목록 1개 이하는 삭제할수 없습니다.');
+		}
+		
+		listCount();
+
+		e.preventDefault();
+	});
 
 });
 </script>

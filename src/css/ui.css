@@ -5113,9 +5113,9 @@ table .total_price .box .price {
 .upload_area {
 	display: flex;
 	flex-wrap: wrap;
-	overflow: hidden;
 }
 .upload_area .list {
+	position: relative;
 	min-width: 160px;
 	padding: 0 10px 0 0;
 	margin-bottom: 10px;
@@ -5137,6 +5137,17 @@ table .total_price .box .price {
 .upload_area .upload_display img {
 	max-height: 100%;
 	padding: 5px;
+}
+.upload_area .list .btn_delete {
+	display: none;
+	position: absolute;
+	top: -2px;
+	right: 20px;
+	width: 15px;
+	height: 15px;
+	background-position: -470px -111px;
+	text-indent: -9999px;
+	overflow: hidden;
 }
 .check_use {
 	margin-bottom: 10px;
@@ -5244,7 +5255,26 @@ table .total_price .box .price {
 	margin: 0;
 }
 
-
+.btn_add_list {
+	position: relative;
+	display: inline-block;
+	width: 140px;
+	height: 68px;
+	border: 1px solid #cbcbcb;
+	vertical-align: middle;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.btn_add_list:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 46px;
+	height: 46px;
+	margin: -23px 0 0 -23px;
+	background-position: -69px -138px;
+}
 
 
 
