@@ -936,7 +936,7 @@ button {
     text-indent: -9999px;
     overflow: hidden;
 }
-.ly .pop_header .btn_pop_close , .pop_product_wrap .btn_pop_close {
+.ly .pop_header .btn_pop_close , .pop_product_wrap .btn_pop_close , .pop_win_wrap .pop_header .btn_pop_close {
 	position:absolute; 
 	top: 50%;
 	right: 20px;
@@ -5274,6 +5274,37 @@ table .total_price .box .price {
 	height: 46px;
 	margin: -23px 0 0 -23px;
 	background-position: -69px -138px;
+}
+
+/* 윈도우 팝업 */
+.pop_win_wrap .pop_header {
+	position: relative;
+    padding: 22px 30px;
+    background: #ffac27;
+}
+.pop_win_wrap .pop_header .tit {
+	display: inline-block;
+    font-family: "Noto Sans Korean" , sans-serif;
+    font-size: 24px;
+    color: #000;
+    vertical-align: middle;
+}
+.pop_win_wrap .pop_contents {
+	padding: 14px 9px;
+}
+.pop_win_wrap .pop_contents .noti {
+	margin: 0 0 7px;
+    font-family: "Noto Sans Korean" , sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	color: #000;
+	text-align: right;
+}
+.wid_auto {
+	min-width: auto;
+}
+.tbl_h283 {
+	max-height: 283px;
 }
 
 

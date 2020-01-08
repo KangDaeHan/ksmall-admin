@@ -390,6 +390,16 @@ $(document).ready(function() {
 			from.datepicker( "option", "maxDate", getDate( this ) );
 		});
 
+	$("[id^=datepicker]").datepicker({
+		defaultDate: startDate,
+		changeMonth: true,
+		showOn: "both",
+		buttonImageOnly: true,
+		buttonImage: "../image/icon_calendar.png",
+		buttonText: "날짜 선택",
+		numberOfMonths: 1
+	});
+
     function getDate( element ) {
       var date;
       try {

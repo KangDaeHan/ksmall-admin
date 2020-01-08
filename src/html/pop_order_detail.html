@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>KS MALL</title>
+<meta charset="utf-8">
+<meta name="keywords" content="키워드 등록" />
+<meta name="description" content="설명글 등록" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="../css/ui.css" />
+</head>
+<body>
+<div class="pop_win_wrap">
+<!-- 팝업 상단 -->
+<div class="pop_header">
+	<h2 class="tit">주문배송 상세조회</h2>
+	<button type="button" class="sprite btn_pop_close">팝업닫기</button>
+</div>
+<!-- //팝업 상단 -->
+
+<!-- 팝업 내용 -->
+<div class="pop_contents">
+	<p class="noti">* 출고일자는 2014-05-01 와 같은 형식으로 입력해주세요.</p>
+	<!-- 리스트 -->
+	<div class="tbl_area tbl_scroll tbl_h283">
+		<table class="tbl_col">
+			<thead>
+				<tr>
+					<th style="width: 150px;">주문번호</th>
+					<th style="width: 100px;">주문일자</th>
+					<th style="width: 120px;">프로젝트코드</th>
+					<th style="width: 100px;">단말기코드</th>
+					<th style="width: 150px;">단말기명</th>
+					<th style="width: 90px;">주문수량</th>
+					<th style="width: 140px;">출고일자</th>
+					<th style="width: 130px;">택배사</th>
+					<th style="width: 150px;">송장번호</th>
+					<th style="width: 80px;">확인</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 등록된 내용 없을 시 -->
+				<!-- <tr>
+					<td colspan="10" class="no_result">해당조건의 주문내역이 존재하지 않습니다.</td>
+				</tr> -->
+				<!-- //등록된 내용 없을 시 -->
+				<tr>
+					<td>AS200150002323</td>
+					<td>2020-01-10</td>
+					<td>DV4005</td>
+					<td>DV4005</td>
+					<td>KS1100S</td>
+					<td>1</td>
+					<td>
+						<div class="datepicker">
+							<input type="text" class="date_from" id="datepicker1" name="datepicker" style="width: 90px;"/>
+						</div>
+					</td>
+					<td>
+						<div class="sel_area">
+							<select name="" id="" class="sel_box">
+								<option value="">일양택배</option>
+								<option value="">로젠택배</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<input type="text" class="inpt" name="" />
+					</td>
+					<td>
+						<button type="button" class="btn xs gray wid_auto">확인</button>
+					</td>
+				</tr>
+				<tr>
+					<td>AS200150002323</td>
+					<td>2020-01-10</td>
+					<td>DV4005</td>
+					<td>DV4005</td>
+					<td>KS1100S</td>
+					<td>1</td>
+					<td>
+						<div class="datepicker">
+							<input type="text" class="date_from" id="datepicker2" name="datepicker" style="width: 90px;"/>
+						</div>
+					</td>
+					<td>
+						<div class="sel_area">
+							<select name="" id="" class="sel_box">
+								<option value="">일양택배</option>
+								<option value="">로젠택배</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<input type="text" class="inpt" name="" />
+					</td>
+					<td>
+						<button type="button" class="btn xs gray wid_auto">확인</button>
+					</td>
+				</tr>
+				<tr>
+					<td>AS200150002323</td>
+					<td>2020-01-10</td>
+					<td>DV4005</td>
+					<td>DV4005</td>
+					<td>KS1100S</td>
+					<td>1</td>
+					<td>
+						<div class="datepicker">
+							<input type="text" class="date_from" id="datepicker3" name="datepicker" style="width: 90px;"/>
+						</div>
+					</td>
+					<td>
+						<div class="sel_area">
+							<select name="" id="" class="sel_box">
+								<option value="">일양택배</option>
+								<option value="">로젠택배</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<input type="text" class="inpt" name="" />
+					</td>
+					<td>
+						<button type="button" class="btn xs gray wid_auto">확인</button>
+					</td>
+				</tr>
+				<tr>
+					<td>AS200150002323</td>
+					<td>2020-01-10</td>
+					<td>DV4005</td>
+					<td>DV4005</td>
+					<td>KS1100S</td>
+					<td>1</td>
+					<td>
+						<div class="datepicker">
+							<input type="text" class="date_from" id="datepicker4" name="datepicker" style="width: 90px;"/>
+						</div>
+					</td>
+					<td>
+						<div class="sel_area">
+							<select name="" id="" class="sel_box">
+								<option value="">일양택배</option>
+								<option value="">로젠택배</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<input type="text" class="inpt" name="" />
+					</td>
+					<td>
+						<button type="button" class="btn xs gray wid_auto">확인</button>
+					</td>
+				</tr>
+				<tr>
+					<td>AS200150002323</td>
+					<td>2020-01-10</td>
+					<td>DV4005</td>
+					<td>DV4005</td>
+					<td>KS1100S</td>
+					<td>1</td>
+					<td>
+						<div class="datepicker">
+							<input type="text" class="date_from" id="datepicker5" name="datepicker" style="width: 90px;"/>
+						</div>
+					</td>
+					<td>
+						<div class="sel_area">
+							<select name="" id="" class="sel_box">
+								<option value="">일양택배</option>
+								<option value="">로젠택배</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<input type="text" class="inpt" name="" />
+					</td>
+					<td>
+						<button type="button" class="btn xs gray wid_auto">확인</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- //리스트 -->
+</div>
+<!-- //팝업 내용 -->
+
+<!-- 팝업 하단 -->
+<div class="pop_footer">
+	<div class="btn_area">
+		<a href="#" class="btn sm sch">닫기</a>
+	</div>
+</div>
+<!-- //팝업 하단 -->
+</div>
+
+<!-- 페이지 로딩 필요시 -->
+<div class="loading">
+	<img src="../image/loader.gif" alt="">
+</div>
+<!-- //페이지 로딩 필요시 -->
+
+<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-3.1.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.12.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.compatibility.min.js"></script>
+<script type="text/javascript" src="../js/text-overflow.js"></script>
+<script type="text/javascript" src="../js/lightbox.min.js"></script>
+<script type="text/javascript" src="../js/jquery.monthpicker.js"></script>
+<script type="text/javascript" src="../js/ui.js"></script>
+<script>
+$(document).ready(function() {
+
+});
+</script>
+</body>
+</html>
